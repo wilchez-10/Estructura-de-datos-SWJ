@@ -20,22 +20,23 @@ public class OrdenamientosObjetos {
         // Crear arreglo desordenado de personas
         Persona[] personas = {persona1, persona5, persona3, persona4, persona2, persona6, persona7};
 
-        // Ordenar personas usando el algoritmo de burbuja
+        
         burbuja(personas);
 
-        // Mostrar personas ordenadas
+        // personas ordenadas
         System.out.println("Personas ordenadas por edad:");
         for (Persona persona : personas) {
             System.out.println(persona.getNombre() + " - Edad: " + persona.getEdad());
         }
     }
 
-    // Algoritmo de burbuja para ordenar personas por edad
+    
     public void burbuja(Persona[] personas) {
         for (int i = 0; i < personas.length - 1; i++) {
             for (int j = 0; j < personas.length - i - 1; j++) {
                 if (personas[j].compareTo(personas[j + 1]) > 0) {
-                    // Intercambiar personas[j] y personas[j + 1]
+                    
+
                     Persona temp = personas[j];
                     personas[j] = personas[j + 1];
                     personas[j + 1] = temp;
@@ -63,7 +64,7 @@ class Persona implements Comparable<Persona> {
         return nombre;
     }
 
-    // Método compareTo para comparar edades
+    //compareTo 
     @Override
     public int compareTo(Persona otraPersona) {
         return Integer.compare(this.edad, otraPersona.edad);
